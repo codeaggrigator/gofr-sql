@@ -144,7 +144,8 @@ func (t *Tx) Rollback() error {
 //     users := []user{}
 //     db.Select(ctx, &users, "select * from users")
 //
-//nolint:exhaustive // We just want to take care of slice and struct in this case.
+
+
 func (d *DB) Select(ctx context.Context, data interface{}, query string, args ...interface{}) {
 	// If context is done, it is not needed
 	if ctx.Err() != nil {
